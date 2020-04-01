@@ -40,12 +40,12 @@ class Base {
         {
             r = Math.random();
         }
-        if (r < 20.0) {
+        if (r < 1.0) {
             // fail("oops");
             assertTrue(true);
-        } else if (r < 21.0) {
+        } else if (r < 2.0) {
             throw new Exception("skipping");
-        } else if (r > 22.0) {
+        } else if (r > 3.0) {
             fail("oops");
         }
     }
