@@ -29,7 +29,13 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
 class Base {
+
     protected double r = 0;
+
+    protected void trot(double value) throws Exception {
+        r = Math.sqrt(value);
+        run();
+    }
     protected void run(double seed) throws Exception {
         r = Math.random();
         r *= seed;
