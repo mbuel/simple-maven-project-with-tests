@@ -33,7 +33,7 @@ public class SomeTest extends Base {
         try {
             run();
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Exception in test1.");
         }
     }
 
@@ -41,7 +41,7 @@ public class SomeTest extends Base {
         try {
             run();
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Exception in test2.");
         }
     }
 
@@ -49,7 +49,7 @@ public class SomeTest extends Base {
         try {
             run();
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Exception in test3.");
         }
     }
 
@@ -57,7 +57,7 @@ public class SomeTest extends Base {
         try {
             run();
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Exception in test4.");
         }
     }
 
@@ -65,7 +65,7 @@ public class SomeTest extends Base {
         try {
             run();
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Exception in test5.");
         }
     }
 
@@ -73,7 +73,7 @@ public class SomeTest extends Base {
         try {
             run();
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Exception in test6.");
         }
     }
 
@@ -81,7 +81,7 @@ public class SomeTest extends Base {
         try {
             run(20.0);
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Exception in test7.");
         }
     }
 
@@ -89,7 +89,7 @@ public class SomeTest extends Base {
         try {
             run( 6);
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Exception in test8.");
         }
     }
 
@@ -97,7 +97,7 @@ public class SomeTest extends Base {
         try {
             run();
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Exception in test9.");
         }
     }
 
@@ -105,7 +105,7 @@ public class SomeTest extends Base {
         try {
             run(1.0);
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Exception in test10.");
         }
     }
 
@@ -113,7 +113,7 @@ public class SomeTest extends Base {
         try {
             run(0.5);
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Exception in test11.");
         }
     }
 
@@ -121,7 +121,7 @@ public class SomeTest extends Base {
         try {
             run(0.25);
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Exception in test12.");
         }
     }
 
