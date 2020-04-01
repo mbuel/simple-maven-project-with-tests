@@ -53,7 +53,11 @@ class Base {
         {
             r = Math.random();
         }
+<<<<<<< HEAD
         if (r < 1.2) {
+=======
+        if (r < 1.0) {
+>>>>>>> 2739a41... Doing some build fixes to beta.
             // fail("oops");
             assertTrue(true);
         } else if (r < 2.0) {
