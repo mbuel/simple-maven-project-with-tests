@@ -36,9 +36,22 @@ public class OtherTest extends test.Base {
         try {
             run();
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Exception in myTest");
         }
     }
+
+
+    @Test
+    public void trotTest() {
+    // given a trot, we should return a walk
+        try {
+            trot(4600);
+        } catch (Exception e) {
+            System.out.println("Exception in trotTest");
+        }
+    }
+
+
 
     @Test public void test_pass_getDouble() {
         assertEquals(16, getDouble(4));
