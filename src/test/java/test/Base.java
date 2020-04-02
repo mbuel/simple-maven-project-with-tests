@@ -31,22 +31,18 @@ import static org.junit.jupiter.api.Assertions.fail;
 class Base {
 
     protected double r = 0;
-<<<<<<< HEAD
-    protected boolean a;
-=======
 
->>>>>>> 33dacd6... updated .gitignore to exclude directories
+    protected boolean a;
+
     protected void trot(double value) throws Exception {
         r = Math.sqrt(value);
         run();
     }
-<<<<<<< HEAD
     protected void walk(double value) throws Exception {
         r = Math.floor(value);
         run();
     }
-=======
->>>>>>> 33dacd6... updated .gitignore to exclude directories
+
     protected void run(double seed) throws Exception {
         r = Math.random();
         r *= seed;
@@ -57,7 +53,7 @@ class Base {
         {
             r = Math.random();
         }
-        if (r < 1.0) {
+        if (r < 1.2) {
             // fail("oops");
             assertTrue(true);
         } else if (r < 2.0) {
