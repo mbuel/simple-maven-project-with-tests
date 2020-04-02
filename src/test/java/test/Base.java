@@ -31,9 +31,13 @@ import static org.junit.jupiter.api.Assertions.fail;
 class Base {
 
     protected double r = 0;
-
+    protected boolean a;
     protected void trot(double value) throws Exception {
         r = Math.sqrt(value);
+        run();
+    }
+    protected void walk(double value) throws Exception {
+        r = Math.floor(value);
         run();
     }
     protected void run(double seed) throws Exception {
