@@ -34,7 +34,16 @@ pipeline {
 
           }
           steps {
-            bat 'mvn package verify'
+            script {
+                if (build_ok) {
+                    bat 'mvn package verify'
+                    currentBuild.result = "SUCCESS"
+                }
+                else {
+                    currentBuild.result = "FAIL"
+                }
+            }
+
           }
     }
 
