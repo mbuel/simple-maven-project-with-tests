@@ -23,7 +23,7 @@ jobs:
         dotnet-version: 3.1.102
 
     - name: ReportGenerator
-      uses: danielpalme/ReportGenerator-GitHub-Action@v4.5.2
+      uses: danielpalme/ReportGenerator-GitHub-Action@v4.5.1
       with:
         reports: 'target\findbugs\findbugsXml.xml;target\pmd.xml;target\surefire-reports\*.xml;target\site\jacoco\jacoco.xml' # REQUIRED # The coverage reports that should be parsed (separated by semicolon). Globbing is supported.
         targetdir: 'reports' # REQUIRED # The directory where the generated report should be saved.
