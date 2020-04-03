@@ -24,7 +24,6 @@ pipeline {
     stage('create package') {
           when {
             branch 'master'
-            build_ok
           }
           post {
             success {
