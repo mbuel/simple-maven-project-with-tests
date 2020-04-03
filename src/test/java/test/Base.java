@@ -32,23 +32,17 @@ class Base {
 
     protected double r = 0;
 
-<<<<<<< HEAD
     protected boolean a;
 
-=======
->>>>>>> 6686ef3... updated .gitignore to exclude directories
     protected void trot(double value) throws Exception {
         r = Math.sqrt(value);
         run();
     }
-<<<<<<< HEAD
     protected void walk(double value) throws Exception {
         r = Math.floor(value);
         run();
     }
 
-=======
->>>>>>> 6686ef3... updated .gitignore to exclude directories
     protected void run(double seed) throws Exception {
         r = Math.random();
         r *= seed;
@@ -59,11 +53,7 @@ class Base {
         {
             r = Math.random();
         }
-<<<<<<< HEAD
         if (r < 1.2) {
-=======
-        if (r < 1.0) {
->>>>>>> 31b3492... Doing some build fixes to beta.
             // fail("oops");
             assertTrue(true);
         } else if (r < 2.0) {
