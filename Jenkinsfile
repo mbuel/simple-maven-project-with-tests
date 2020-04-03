@@ -8,18 +8,20 @@ pipeline {
     }
 
     stage('Windows Testing') {
-        try {
-          steps {
-            bat 'mvn test'
-          }
-        } catch(e) {
-          build_ok = false
-          echo e.toString()
+        steps {
+            script {
+                try {
+                    bat 'mvn test'
+                }
+                catch(e) {
+                    build_ok = false
+                    echo e.toString()
+                }
+            }
         }
     }
 
-    if (build_ok) {
-        stage('create package') {
+    stage('create package') {
           when {
             branch 'master'
           }
@@ -31,13 +33,20 @@ pipeline {
 
           }
           steps {
-            bat 'mvn package verify'
+            script {
+                if (build_ok) {
+                    bat 'mvn package verify'
+                    currentBuild.result = "SUCCESS"
+                }
+                else {
+                    currentBuild.result = "FAIL"
+                }
+            }
+
           }
-        }
-        currentBuild.result = "SUCCESS"
-    } else {
-        currentBuild.result = "FAILURE"
     }
+
+
 
     stage('Reporting') {
         parallel {
