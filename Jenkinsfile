@@ -21,33 +21,6 @@ pipeline {
         }
     }
 
-    stage('create package') {
-          when {
-            branch 'master'
-          }
-          post {
-            success {
-              echo 'Now Archiving...'
-              archiveArtifacts 'target/*.jar'
-            }
-
-          }
-          steps {
-            script {
-                if (build_ok) {
-                    bat 'mvn package verify'
-                    currentBuild.result = "SUCCESS"
-                }
-                else {
-                    currentBuild.result = "FAIL"
-                }
-            }
-
-          }
-    }
-
-
-
     stage('Reporting') {
         parallel {
             stage('Record Jacoco') {
@@ -77,6 +50,32 @@ pipeline {
 
         }
     }
+
+    stage('create package') {
+          when {
+            branch 'master'
+          }
+          post {
+            success {
+              echo 'Now Archiving...'
+              archiveArtifacts 'target/*.jar'
+            }
+
+          }
+          steps {
+            script {
+                if (build_ok) {
+                    bat 'mvn package verify'
+                    currentBuild.result = "SUCCESS"
+                }
+                else {
+                    currentBuild.result = "FAIL"
+                }
+            }
+
+          }
+    }
+
     stage('Clean environment') {
       steps {
         bat 'mvn clean'
