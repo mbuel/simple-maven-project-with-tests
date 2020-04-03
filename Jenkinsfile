@@ -12,6 +12,7 @@ pipeline {
             script {
                 try {
                     bat 'mvn test'
+                    build_ok = true
                 }
                 catch(e) {
                     build_ok = false
