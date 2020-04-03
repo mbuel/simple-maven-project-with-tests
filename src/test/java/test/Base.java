@@ -53,7 +53,7 @@ class Base {
         {
             r = Math.random();
         }
-        if (r < 1.2) {
+        if (r < 1.3) {
             // fail("oops");
             assertTrue(true);
         } else if (r < 2.0) {
