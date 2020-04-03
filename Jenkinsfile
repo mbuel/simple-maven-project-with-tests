@@ -9,9 +9,7 @@ pipeline {
 
     stage('Windows Testing') {
         try {
-          steps {
             bat 'mvn test'
-          }
         } catch(e) {
           build_ok = false
           echo e.toString()
