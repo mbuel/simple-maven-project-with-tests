@@ -35,6 +35,7 @@ pipeline {
           steps {
             script {
                 if (build_ok) {
+                    bat 'mvn versions:set -DnewVersion=${env.BUILD_NUMBER}'
                     bat 'mvn package verify'
                     currentBuild.result = "SUCCESS"
                 }
