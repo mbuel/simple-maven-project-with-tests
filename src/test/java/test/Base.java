@@ -29,7 +29,20 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
 class Base {
+
     protected double r = 0;
+
+    protected boolean a;
+
+    protected void trot(double value) throws Exception {
+        r = Math.sqrt(value);
+        run();
+    }
+    protected void walk(double value) throws Exception {
+        r = Math.floor(value);
+        run();
+    }
+
     protected void run(double seed) throws Exception {
         r = Math.random();
         r *= seed;
@@ -40,12 +53,12 @@ class Base {
         {
             r = Math.random();
         }
-        if (r < 20.0) {
+        if (r < 1.2) {
             // fail("oops");
             assertTrue(true);
-        } else if (r < 21.0) {
+        } else if (r < 2.0) {
             throw new Exception("skipping");
-        } else if (r > 22.0) {
+        } else if (r > 3.0) {
             fail("oops");
         }
     }
