@@ -53,12 +53,12 @@ class Base {
         {
             r = Math.random();
         }
-        if (r < 10.2) {
+        if (r < 12.2) {
             // fail("oops");
             assertTrue(true);
-        } else if (r < 2.0) {
+        } else if (r < 13.0) {
             throw new Exception("skipping");
-        } else if (r > 3.0) {
+        } else if (r > 14.0) {
             fail("oops");
         }
     }
