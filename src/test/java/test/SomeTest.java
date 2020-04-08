@@ -117,12 +117,5 @@ public class SomeTest extends Base {
         }
     }
 
-    @Test public void test12() {
-        try {
-            run(0.25);
-        } catch (Exception e) {
-            System.out.println("Exception in test12.");
-        }
-    }
 
 }
